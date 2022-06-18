@@ -1,15 +1,56 @@
-.relative-section{
+/* .relative-section{
     background-position: center center;
-    text-align: center;
     position: relative;
     background-size: cover;
-}
-.Items-intro{
+} */
+/* .Items-intro{
     position:absolute;
     top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
+} */
 .right-col{
     width: 550px;
+}
+.Items-intro .left-col h1{
+    margin: 0 0 10px 0;
+    font-size: 48px;
+    color: white;
+    font-weight: 700;
+    line-height: 56px;
+}
+.Items-intro .left-col h2{
+    margin: 0 0 50px 0;
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.6);
+}
+.Items-intro .left-col .myButton{
+    background-color: #47b2e4;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 25px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    display: inline-block;
+    transition: .3s;
+}
+.Items-intro .left-col .myButton:hover{
+    background-color: #3f95bd;
+}
+.video-my{
+    margin: 5px 0 0 25px;
+    font-size: 22px;
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+    cursor:pointer;
+}
+.video-my:hover{
+   color: rgb(170, 169, 169);
+
+}
+.video-my .logo{
+    margin-right: 10px;
+    font-size: 25px;
 }
