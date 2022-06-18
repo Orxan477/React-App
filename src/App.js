@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "reactstrap";
 import Navbar from "./Components/Navbar/Navbar";
-import "./css/style.css";
+import "../public/assets/css/style.css";
 
 function App() {
   return (
