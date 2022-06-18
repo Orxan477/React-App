@@ -1,0 +1,15 @@
+.relative-section{
+    background-position: center center;
+    text-align: center;
+    position: relative;
+    background-size: cover;
+}
+.Items-intro{
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.right-col{
+    width: 490px;
+}
