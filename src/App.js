@@ -1,7 +1,14 @@
+import { Container, Row } from "reactstrap";
+import Navbar from "./Components/Navbar/Navbar"
+
 function App() {
   return (
     <div>
-      <h1>Test!!!</h1>
+      <Container>
+      <Row>
+        <Navbar />
+      </Row>
+      </Container>
     </div>
   );
 }
