@@ -21,8 +21,8 @@ export default class Navi extends Component {
         <Navbar expand="md" light>
           <NavbarBrand href="/">Education</NavbarBrand>
           <NavbarToggler onClick={function noRefCheck() {}} />
-          <Collapse navbar>
-            <Nav className="me-auto" navbar>
+          <Collapse navbar className="d-flex justify-content-end">
+            <Nav  navbar>
               <NavItem>
                 <NavLink href="/components/">Components</NavLink>
               </NavItem>
@@ -42,8 +42,8 @@ export default class Navi extends Component {
                   <DropdownItem>Reset</DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
+            <NavbarText >Orxan477</NavbarText>
             </Nav>
-            <NavbarText>Orxan477</NavbarText>
           </Collapse>
         </Navbar>
       </div>
