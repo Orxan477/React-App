@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "reactstrap";
 import Navbar from "./Components/Navbar/Navbar";
-import "../public/assets/css/style.css";
+import "./assets/css/style.css";
 
 function App() {
   return (
@@ -24,10 +24,10 @@ function App() {
                 <Row>
                   <Col lg="6 border"></Col>
                   <Col lg="6 border">
-                    <div>
+                    <div className="d-flex">
                       <img
                         className="img-fluid right-col"
-                        src="assets/img/hero-img.png"
+                        src="img/hero-img.png"
                       />
                     </div>
                   </Col>
