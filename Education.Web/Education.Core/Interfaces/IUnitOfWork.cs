@@ -2,7 +2,7 @@
 
 namespace Education.Core.Interfaces
 {
-    internal interface IUnitOfWork
+    public interface IUnitOfWork
     {
         public IEmployeeRepository EmployeeRepository { get; }
         Task SaveChangeAsync();
