@@ -56,3 +56,12 @@
     width: "100%";
     min-height: "90vh"
 }
+.card-sec h4{
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+}
+.myCard{
+    text-align: center;
+}
