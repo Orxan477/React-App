@@ -1,6 +1,6 @@
 ﻿namespace Education.Core.Entities
 {
-    internal class Intro
+    public class Intro
     {
         public int Id { get; set; }
         public string Head { get; set; }

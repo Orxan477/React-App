@@ -13,3 +13,5 @@ D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Ed
 D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Data\obj\Debug\net6.0\refint\Education.Data.dll
 D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Data\obj\Debug\net6.0\Education.Data.pdb
 D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Data\obj\Debug\net6.0\ref\Education.Data.dll
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Data\bin\Debug\net6.0\Education.Data.runtimeconfig.json
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Data\obj\Debug\net6.0\Education.Data.genruntimeconfig.cache
