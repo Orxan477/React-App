@@ -1,0 +1,17 @@
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Business\bin\Debug\net6.0\Education.Business.deps.json
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Business\bin\Debug\net6.0\Education.Business.dll
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Business\bin\Debug\net6.0\Education.Business.pdb
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Business\bin\Debug\net6.0\Education.Core.dll
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Business\bin\Debug\net6.0\Education.Data.dll
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Business\bin\Debug\net6.0\Education.Data.pdb
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Business\bin\Debug\net6.0\Education.Core.pdb
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Business\obj\Debug\net6.0\Education.Business.csproj.AssemblyReference.cache
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Business\obj\Debug\net6.0\Education.Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Business\obj\Debug\net6.0\Education.Business.AssemblyInfoInputs.cache
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Business\obj\Debug\net6.0\Education.Business.AssemblyInfo.cs
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Business\obj\Debug\net6.0\Education.Business.csproj.CoreCompileInputs.cache
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Business\obj\Debug\net6.0\Education.Business.csproj.CopyComplete
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Business\obj\Debug\net6.0\Education.Business.dll
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Business\obj\Debug\net6.0\refint\Education.Business.dll
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Business\obj\Debug\net6.0\Education.Business.pdb
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Business\obj\Debug\net6.0\ref\Education.Business.dll

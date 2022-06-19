@@ -1,0 +1,15 @@
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Data\bin\Debug\net6.0\Education.Data.deps.json
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Data\bin\Debug\net6.0\Education.Data.dll
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Data\bin\Debug\net6.0\Education.Data.pdb
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Data\bin\Debug\net6.0\Education.Core.dll
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Data\bin\Debug\net6.0\Education.Core.pdb
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Data\obj\Debug\net6.0\Education.Data.csproj.AssemblyReference.cache
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Data\obj\Debug\net6.0\Education.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Data\obj\Debug\net6.0\Education.Data.AssemblyInfoInputs.cache
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Data\obj\Debug\net6.0\Education.Data.AssemblyInfo.cs
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Data\obj\Debug\net6.0\Education.Data.csproj.CoreCompileInputs.cache
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Data\obj\Debug\net6.0\Education.Data.csproj.CopyComplete
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Data\obj\Debug\net6.0\Education.Data.dll
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Data\obj\Debug\net6.0\refint\Education.Data.dll
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Data\obj\Debug\net6.0\Education.Data.pdb
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Data\obj\Debug\net6.0\ref\Education.Data.dll

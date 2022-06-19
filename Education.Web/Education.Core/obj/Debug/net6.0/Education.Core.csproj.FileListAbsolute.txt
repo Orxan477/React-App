@@ -1,0 +1,12 @@
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Core\bin\Debug\net6.0\Education.Core.deps.json
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Core\bin\Debug\net6.0\Education.Core.dll
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Core\bin\Debug\net6.0\Education.Core.pdb
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Core\obj\Debug\net6.0\Education.Core.csproj.AssemblyReference.cache
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Core\obj\Debug\net6.0\Education.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Core\obj\Debug\net6.0\Education.Core.AssemblyInfoInputs.cache
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Core\obj\Debug\net6.0\Education.Core.AssemblyInfo.cs
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Core\obj\Debug\net6.0\Education.Core.csproj.CoreCompileInputs.cache
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Core\obj\Debug\net6.0\Education.Core.dll
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Core\obj\Debug\net6.0\refint\Education.Core.dll
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Core\obj\Debug\net6.0\Education.Core.pdb
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Core\obj\Debug\net6.0\ref\Education.Core.dll

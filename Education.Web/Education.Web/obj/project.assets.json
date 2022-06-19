@@ -72,6 +72,42 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "Education.Business/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Education.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Education.Business.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Education.Business.dll": {}
+        }
+      },
+      "Education.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Education.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Education.Core.dll": {}
+        }
+      },
+      "Education.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Education.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Education.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Education.Data.dll": {}
+        }
       }
     }
   },
@@ -200,10 +236,26 @@
         "swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "Education.Business/1.0.0": {
+      "type": "project",
+      "path": "../Education.Business/Education.Business.csproj",
+      "msbuildProject": "../Education.Business/Education.Business.csproj"
+    },
+    "Education.Core/1.0.0": {
+      "type": "project",
+      "path": "../Education.Core/Education.Core.csproj",
+      "msbuildProject": "../Education.Core/Education.Core.csproj"
+    },
+    "Education.Data/1.0.0": {
+      "type": "project",
+      "path": "../Education.Data/Education.Data.csproj",
+      "msbuildProject": "../Education.Data/Education.Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Education.Business >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -238,7 +290,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Documents\\HP\\Private\\Code Academy\\Front-End\\Site\\E-COM React\\Education.Web\\Education.Business\\Education.Business.csproj": {
+              "projectPath": "D:\\Documents\\HP\\Private\\Code Academy\\Front-End\\Site\\E-COM React\\Education.Web\\Education.Business\\Education.Business.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

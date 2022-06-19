@@ -1,0 +1,49 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Education.Business/1.0.0": {
+        "dependencies": {
+          "Education.Data": "1.0.0"
+        },
+        "runtime": {
+          "Education.Business.dll": {}
+        }
+      },
+      "Education.Core/1.0.0": {
+        "runtime": {
+          "Education.Core.dll": {}
+        }
+      },
+      "Education.Data/1.0.0": {
+        "dependencies": {
+          "Education.Core": "1.0.0"
+        },
+        "runtime": {
+          "Education.Data.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Education.Business/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Education.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Education.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -25,3 +25,9 @@ D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Ed
 D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Web\obj\Debug\net6.0\Education.Web.pdb
 D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Web\obj\Debug\net6.0\Education.Web.genruntimeconfig.cache
 D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Web\obj\Debug\net6.0\ref\Education.Web.dll
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Web\bin\Debug\net6.0\Education.Business.dll
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Web\bin\Debug\net6.0\Education.Core.dll
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Web\bin\Debug\net6.0\Education.Data.dll
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Web\bin\Debug\net6.0\Education.Business.pdb
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Web\bin\Debug\net6.0\Education.Core.pdb
+D:\Documents\HP\Private\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Web\bin\Debug\net6.0\Education.Data.pdb
