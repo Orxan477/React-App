@@ -1,5 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Education.Data.DAL;
+using Education.Core.Interfaces;
+using Education.Data.Implementations;
+using Education.Business.Implementations.Employee;
+using Education.Business.Interfaces.Employee;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +17,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration["ConnectionStrings:Default"]);
 });
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 
 var app = builder.Build();
 

@@ -5,7 +5,7 @@ using Education.Data.Implementations.Employee;
 
 namespace Education.Data.Implementations
 {
-    internal class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
         private AppDbContext _context;
         private EmployeeRepository _employeeRepository;

@@ -15,8 +15,13 @@ namespace Education.Web.Controllers
         }
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
+        { 
+            return Ok(await _employeeService.Get(id));
+        }
+        [HttpGet()]
+        public async Task<IActionResult> GetAll()
         {
-            Core.Entities.Employee employee= await _employeeService.Get(id);
+            List<Core.Entities.Employee> employee = await _employeeService.GetAll();
             return Ok(employee);
         }
     }
