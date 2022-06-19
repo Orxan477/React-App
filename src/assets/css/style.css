@@ -1,14 +1,11 @@
-/* .relative-section{
+.relative-section{
     background-position: center center;
     position: relative;
     background-size: cover;
-} */
-/* .Items-intro{
+} .Items-intro{
     position:absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-} */
+    transform: translateY(20%);
+} 
 .right-col{
     width: 550px;
 }
@@ -53,4 +50,9 @@
 .video-my .logo{
     margin-right: 10px;
     font-size: 25px;
+}
+.section-back{
+    background-color: "#37517e";
+    width: "100%";
+    min-height: "90vh"
 }
