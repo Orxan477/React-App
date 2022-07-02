@@ -9,12 +9,10 @@ namespace Education.Web.Controllers
     [ApiController]
     public class EmployeeController : ControllerBase
     {
-        private IEmployeeService _employeeService;
         private IMediator _mediator;
 
-        public EmployeeController(IEmployeeService employeeService,IMediator mediator)
+        public EmployeeController(IMediator mediator)
         {
-            _employeeService = employeeService;
             _mediator = mediator;
         }
         [HttpGet("{id}")]
