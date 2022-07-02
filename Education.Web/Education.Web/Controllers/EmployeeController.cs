@@ -32,5 +32,15 @@ namespace Education.Web.Controllers
         {
             return Ok();
         }
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update()
+        {
+            return Ok();
+        }
+        [HttpPatch("{id}")]
+        public async Task<IActionResult> Delete()
+        {
+            return Ok();
+        }
     }
 }
