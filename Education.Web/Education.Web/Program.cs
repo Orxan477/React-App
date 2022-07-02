@@ -4,12 +4,15 @@ using Education.Core.Interfaces;
 using Education.Data.Implementations;
 using Education.Business.Implementations.Employee;
 using Education.Business.Interfaces.Employee;
+using MediatR;
+using Education.Business.Mediator.Queries;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddMediatR(typeof(GetEmployeeByIdQuery));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

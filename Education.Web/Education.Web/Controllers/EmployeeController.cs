@@ -1,4 +1,6 @@
 ﻿using Education.Business.Interfaces.Employee;
+using Education.Business.Mediator.Queries;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Education.Web.Controllers
@@ -8,21 +10,29 @@ namespace Education.Web.Controllers
     public class EmployeeController : ControllerBase
     {
         private IEmployeeService _employeeService;
+        private IMediator _mediator;
 
-        public EmployeeController(IEmployeeService employeeService)
+        public EmployeeController(IEmployeeService employeeService,IMediator mediator)
         {
             _employeeService = employeeService;
+            _mediator = mediator;
         }
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
-        { 
-            return Ok(await _employeeService.Get(id));
+        {
+            var query = new GetEmployeeByIdQuery() { Id = id };
+            return Ok(await _mediator.Send(query));
         }
         [HttpGet()]
         public async Task<IActionResult> GetAll()
         {
-            List<Core.Entities.Employee> employee = await _employeeService.GetAll();
-            return Ok(employee);
+            var query = new GetEmployeeAllQuery() {};
+            return Ok(await _mediator.Send(query));
+        }
+        [HttpPost()]
+        public async Task<IActionResult> Create()
+        {
+            return Ok();
         }
     }
 }

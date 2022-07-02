@@ -14,7 +14,7 @@ namespace Education.Business.Implementations.Employee
         public async Task<Core.Entities.Employee> Get(int id)
         {
             Core.Entities.Employee dbEmployee = await _unitOfWork.EmployeeRepository.Get(x => x.Id == id);
-            if (dbEmployee is null) throw new System.Exception("not");
+            if (dbEmployee is null) throw new Exception("not");
             return dbEmployee;
         }
 

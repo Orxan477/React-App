@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "p4c2pOzfdcqlgTQGyLu/cHCxYmH2emMl9eXhg5u7Hhi0YoTqF6AdjlbPO9A9VY5qty0hSjgCZ6fAh6Mpi0kwjA==",
+  "dgSpecHash": "i3UOTxU+uwHuzoIuKY3gr5XUW7CBKOJRiDIgHQcd0vcTPg8e2XTm211ttqE63GtE1/3O50C57MbxgiKmmUBZBg==",
   "success": true,
   "projectFilePath": "D:\\Documents\\HP\\Private\\Code Academy\\Front-End\\Site\\E-COM React\\Education.Web\\Education.Web\\Education.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\10.0.1\\mediatr.extensions.microsoft.dependencyinjection.10.0.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
