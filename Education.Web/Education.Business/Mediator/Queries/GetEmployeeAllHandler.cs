@@ -1,10 +1,11 @@
 ﻿using Education.Business.Interfaces.Employee;
+using Education.Business.ViewModels.Employee;
 using Education.Core.Entities;
 using MediatR;
 
 namespace Education.Business.Mediator.Queries
 {
-    internal class GetEmployeeAllHandler : IRequestHandler<GetEmployeeAllQuery, List<Employee>>
+    internal class GetEmployeeAllHandler : IRequestHandler<GetEmployeeAllQuery, List<EmployeeVM>>
     {
         private IEmployeeService _employeeService;
 
@@ -13,9 +14,9 @@ namespace Education.Business.Mediator.Queries
             _employeeService = employeeService;
         }
 
-        public async Task<List<Employee>> Handle(GetEmployeeAllQuery request, CancellationToken cancellationToken)
+        public async Task<List<EmployeeVM>> Handle(GetEmployeeAllQuery request, CancellationToken cancellationToken)
         {
-            List<Employee> employee = await _employeeService.GetAll();
+            List<EmployeeVM> employee = await _employeeService.GetAll();
             return employee;
         }
     }

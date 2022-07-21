@@ -1,9 +1,12 @@
-﻿namespace Education.Business.Interfaces.Employee
+﻿using Education.Business.ViewModels.Employee;
+
+namespace Education.Business.Interfaces.Employee
 {
     public interface IEmployeeService
     {
-        Task<List<Core.Entities.Employee>> GetAll();
-        Task<Core.Entities.Employee> Get(int id);
+        Task<List<EmployeeVM>> GetAll();
+        Task<EmployeeVM> Get(int id);
+        Task CreateAsync(CreateEmployeeVM createEmployee);
        
     }
 }

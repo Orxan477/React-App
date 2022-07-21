@@ -338,3 +338,6 @@ E:\Documents\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Web
 E:\Documents\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Web\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 E:\Documents\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Web\obj\Debug\net6.0\Education.Web.RazorAssemblyInfo.cache
 E:\Documents\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Web\obj\Debug\net6.0\Education.Web.RazorAssemblyInfo.cs
+E:\Documents\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Web\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+E:\Documents\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Web\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+E:\Documents\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Web\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
