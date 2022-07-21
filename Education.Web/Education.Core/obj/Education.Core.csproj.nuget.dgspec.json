@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documents\\HP\\Private\\Code Academy\\Front-End\\Site\\E-COM React\\Education.Web\\Education.Core\\Education.Core.csproj": {}
+    "E:\\Documents\\Code Academy\\Front-End\\Site\\E-COM React\\Education.Web\\Education.Core\\Education.Core.csproj": {}
   },
   "projects": {
-    "D:\\Documents\\HP\\Private\\Code Academy\\Front-End\\Site\\E-COM React\\Education.Web\\Education.Core\\Education.Core.csproj": {
+    "E:\\Documents\\Code Academy\\Front-End\\Site\\E-COM React\\Education.Web\\Education.Core\\Education.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documents\\HP\\Private\\Code Academy\\Front-End\\Site\\E-COM React\\Education.Web\\Education.Core\\Education.Core.csproj",
+        "projectUniqueName": "E:\\Documents\\Code Academy\\Front-End\\Site\\E-COM React\\Education.Web\\Education.Core\\Education.Core.csproj",
         "projectName": "Education.Core",
-        "projectPath": "D:\\Documents\\HP\\Private\\Code Academy\\Front-End\\Site\\E-COM React\\Education.Web\\Education.Core\\Education.Core.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\Documents\\HP\\Private\\Code Academy\\Front-End\\Site\\E-COM React\\Education.Web\\Education.Core\\obj\\",
+        "projectPath": "E:\\Documents\\Code Academy\\Front-End\\Site\\E-COM React\\Education.Web\\Education.Core\\Education.Core.csproj",
+        "packagesPath": "C:\\Users\\Orxan477\\.nuget\\packages\\",
+        "outputPath": "E:\\Documents\\Code Academy\\Front-End\\Site\\E-COM React\\Education.Web\\Education.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Orxan477\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

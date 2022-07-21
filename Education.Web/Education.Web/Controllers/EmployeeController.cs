@@ -1,5 +1,4 @@
-﻿using Education.Business.Interfaces.Employee;
-using Education.Business.Mediator.Queries;
+﻿using Education.Business.Mediator.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
