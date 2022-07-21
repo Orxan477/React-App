@@ -1,4 +1,5 @@
-﻿using Education.Business.Interfaces.Employee;
+﻿using AutoMapper;
+using Education.Business.Interfaces.Employee;
 using Education.Business.ViewModels.Employee;
 using Education.Core.Interfaces;
 
@@ -7,10 +8,12 @@ namespace Education.Business.Implementations.Employee
     public class EmployeeService : IEmployeeService
     {
         private IUnitOfWork _unitOfWork;
+        private IMapper _mapper;
 
-        public EmployeeService(IUnitOfWork unitOfWork) 
+        public EmployeeService(IUnitOfWork unitOfWork, IMapper mapper) 
         {
             _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
 
         public Task CreateAsync(CreateEmployeeVM createEmployee)
@@ -23,14 +26,7 @@ namespace Education.Business.Implementations.Employee
         {
             Core.Entities.Employee dbEmployee = await _unitOfWork.EmployeeRepository.Get(x => x.Id == id,"Position");
             if (dbEmployee is null) throw new Exception("not");
-            EmployeeVM employee = new EmployeeVM
-            {
-                Id = id,
-                FullName = dbEmployee.FullName,
-                Age = dbEmployee.Age,
-                Position = dbEmployee.Position.Name,
-                CreateDate = dbEmployee.CreatedDate
-            };
+            EmployeeVM employee = _mapper.Map<EmployeeVM>(dbEmployee);
             return employee;
         }
 
@@ -40,14 +36,7 @@ namespace Education.Business.Implementations.Employee
             List<EmployeeVM> employeeList = new List<EmployeeVM>();
             foreach (var dbEmployee in dbEmployeeList)
             {
-                EmployeeVM employee = new EmployeeVM
-                {
-                    Id = dbEmployee.Id,
-                    FullName = dbEmployee.FullName,
-                    Age = dbEmployee.Age,
-                    Position = dbEmployee.Position.Name,
-                    CreateDate = dbEmployee.CreatedDate
-                };
+                EmployeeVM employee = _mapper.Map<EmployeeVM>(dbEmployee);
                 employeeList.Add(employee);
             }
             return employeeList;

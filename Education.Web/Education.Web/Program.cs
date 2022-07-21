@@ -6,6 +6,8 @@ using Education.Business.Implementations.Employee;
 using Education.Business.Interfaces.Employee;
 using MediatR;
 using Education.Business.Mediator.Queries;
+using AutoMapper;
+using Education.Business.Profiles;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,6 +29,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 });
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
+
+builder.Services.AddMapperService();
 
 var app = builder.Build();
 

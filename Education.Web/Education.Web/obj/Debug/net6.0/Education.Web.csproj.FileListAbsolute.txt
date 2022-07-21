@@ -341,3 +341,5 @@ E:\Documents\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Web
 E:\Documents\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Web\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
 E:\Documents\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Web\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 E:\Documents\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Web\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+E:\Documents\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Web\bin\Debug\net6.0\AutoMapper.dll
+E:\Documents\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Web\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
