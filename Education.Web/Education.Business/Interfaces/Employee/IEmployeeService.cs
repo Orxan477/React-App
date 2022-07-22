@@ -1,4 +1,5 @@
-﻿using Education.Business.ViewModels.Employee;
+﻿using Education.Business.Mediator.Commands.Employee;
+using Education.Business.ViewModels.Employee;
 
 namespace Education.Business.Interfaces.Employee
 {
@@ -6,7 +7,7 @@ namespace Education.Business.Interfaces.Employee
     {
         Task<List<EmployeeVM>> GetAll();
         Task<EmployeeVM> Get(int id);
-        Task CreateAsync(CreateEmployeeVM createEmployee);
+        Task<int> CreateAsync(Core.Entities.Employee employee);
        
     }
 }

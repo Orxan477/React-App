@@ -1,6 +1,7 @@
 ﻿using Education.Business.Mediator.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Education.Business.Mediator.Commands.Employee;
 
 namespace Education.Web.Controllers
 {
@@ -27,9 +28,9 @@ namespace Education.Web.Controllers
             return Ok(await _mediator.Send(query));
         }
         [HttpPost()]
-        public async Task<IActionResult> Create()
+        public async Task<IActionResult> Create(CreateEmployeeComand command)
         {
-            return Ok();
+            return Ok(await _mediator.Send(command));
         }
         [HttpPut("{id}")]
         public async Task<IActionResult> Update()
