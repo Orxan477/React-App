@@ -8,6 +8,8 @@ using MediatR;
 using Education.Business.Mediator.Queries;
 using AutoMapper;
 using Education.Business.Profiles;
+using FluentValidation.AspNetCore;
+using Education.Business.Validations.Employee;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,6 +33,7 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 
 builder.Services.AddMapperService();
+builder.Services.AddFluentValidation(x => x.RegisterValidatorsFromAssemblyContaining<CreateEmployeeVMValidation>());
 
 var app = builder.Build();
 

@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "v3KsVAfex7ZF7Kfqn0dwdfN0cwht4AgoomPy7sSqvH6kfTQ6WxEFRhy7Wju2mbSCT+ybbFFwYn1GG1iGrj3pNw==",
+  "dgSpecHash": "xsQmfkIPN4xwNn3BBegNuvqGgSYg5kvr7XKXG+XiiBBe7gisg0fo3BHkCBs8ltVWJFBnNsBB9iQ9BGcPm5eRuA==",
   "success": true,
   "projectFilePath": "E:\\Documents\\Code Academy\\Front-End\\Site\\E-COM React\\Education.Web\\Education.Web\\Education.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Orxan477\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\Orxan477\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\Orxan477\\.nuget\\packages\\fluentvalidation\\11.1.0\\fluentvalidation.11.1.0.nupkg.sha512",
+    "C:\\Users\\Orxan477\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.1.2\\fluentvalidation.aspnetcore.11.1.2.nupkg.sha512",
+    "C:\\Users\\Orxan477\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.1.0\\fluentvalidation.dependencyinjectionextensions.11.1.0.nupkg.sha512",
     "C:\\Users\\Orxan477\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Orxan477\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
     "C:\\Users\\Orxan477\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",

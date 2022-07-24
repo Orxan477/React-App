@@ -5,7 +5,7 @@ using MediatR;
 
 namespace Education.Business.Mediator.Commands.Employee.Delete
 {
-    public class DeleteEmployeeComandHandler : IRequestHandler<DeleteEmployeeComand, Core.Entities.Employee>
+    public class DeleteEmployeeComandHandler : IRequestHandler<DeleteEmployeeComand, EmployeeVM>
     {
         private IEmployeeService _employeeService;
         private IMapper _mapper;
@@ -15,12 +15,12 @@ namespace Education.Business.Mediator.Commands.Employee.Delete
             _employeeService = employeeService;
             _mapper = mapper;
         }
-        public async Task<Core.Entities.Employee> Handle(DeleteEmployeeComand request, CancellationToken cancellationToken)
+        public async Task<EmployeeVM> Handle(DeleteEmployeeComand request, CancellationToken cancellationToken)
         {
-            EmployeeVM employeeVM =await _employeeService.Get(request.Id);
-            Core.Entities.Employee employee=_mapper.Map<Core.Entities.Employee>(employeeVM);
+            Core.Entities.Employee employee = await _employeeService.Get(request.Id);
             await _employeeService.Delete(employee);
-            return employee;
+            EmployeeVM employeeVM = _mapper.Map<EmployeeVM>(employee);
+            return employeeVM;
         }
     }
 }

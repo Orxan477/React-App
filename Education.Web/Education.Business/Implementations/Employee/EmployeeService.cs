@@ -31,15 +31,14 @@ namespace Education.Business.Implementations.Employee
             await _unitOfWork.SaveChangeAsync();
         }
 
-        public async Task<EmployeeVM> Get(int id)
+        public async Task<Core.Entities.Employee> Get(int id)
         {
             Core.Entities.Employee dbEmployee = await _unitOfWork.EmployeeRepository.Get(x => x.Id == id,"Position");
             if (dbEmployee is null) throw new Exception("not");
-            EmployeeVM employee = _mapper.Map<EmployeeVM>(dbEmployee);
-            return employee;
+            return dbEmployee;
         }
 
-        public async Task<List<EmployeeVM>> GetAll()
+        public async Task<List<Core.Entities.Employee>> GetAll()
         {
             List<Core.Entities.Employee> dbEmployeeList = await _unitOfWork.EmployeeRepository.GetAll(null, "Position");
             List<EmployeeVM> employeeList = new List<EmployeeVM>();
@@ -48,7 +47,7 @@ namespace Education.Business.Implementations.Employee
                 EmployeeVM employee = _mapper.Map<EmployeeVM>(dbEmployee);
                 employeeList.Add(employee);
             }
-            return employeeList;
+            return dbEmployeeList;
         }
     }
 }

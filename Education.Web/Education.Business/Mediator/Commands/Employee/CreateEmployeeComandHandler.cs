@@ -18,8 +18,9 @@ namespace Education.Business.Mediator.Commands.Employee
         {
             Core.Entities.Employee dbEmployee = _mapper.Map<Core.Entities.Employee>(request);
             int employeeId= await _employeeService.CreateAsync(dbEmployee);
-            EmployeeVM employee = await _employeeService.Get(employeeId);
-            return employee;
+            Core.Entities.Employee employee = await _employeeService.Get(employeeId);
+            EmployeeVM employeeVM = _mapper.Map<EmployeeVM>(employee);
+            return employeeVM;
         }
     }
 }
