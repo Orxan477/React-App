@@ -8,6 +8,7 @@ namespace Education.Business.Interfaces.Employee
         Task<List<EmployeeVM>> GetAll();
         Task<EmployeeVM> Get(int id);
         Task<int> CreateAsync(Core.Entities.Employee employee);
+        Task Delete(Core.Entities.Employee employee);
        
     }
 }

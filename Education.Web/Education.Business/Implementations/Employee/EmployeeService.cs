@@ -25,6 +25,12 @@ namespace Education.Business.Implementations.Employee
             return createEmployee.Id;
         }
 
+        public async Task Delete(Core.Entities.Employee employee)
+        {
+            _unitOfWork.EmployeeRepository.Delete(employee);
+            await _unitOfWork.SaveChangeAsync();
+        }
+
         public async Task<EmployeeVM> Get(int id)
         {
             Core.Entities.Employee dbEmployee = await _unitOfWork.EmployeeRepository.Get(x => x.Id == id,"Position");

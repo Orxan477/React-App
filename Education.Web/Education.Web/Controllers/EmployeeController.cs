@@ -2,6 +2,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Education.Business.Mediator.Commands.Employee;
+using Education.Business.Mediator.Commands.Employee.Delete;
 
 namespace Education.Web.Controllers
 {
@@ -38,9 +39,13 @@ namespace Education.Web.Controllers
             return Ok();
         }
         [HttpPatch("{id}")]
-        public async Task<IActionResult> Delete()
+        public async Task<IActionResult> Delete(int id)
         {
-            return Ok();
+            var query = new DeleteEmployeeComand()
+            {
+                Id = id
+            };
+            return Ok(await _mediator.Send(query));
         }
     }
 }
