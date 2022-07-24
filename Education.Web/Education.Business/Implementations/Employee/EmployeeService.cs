@@ -33,14 +33,14 @@ namespace Education.Business.Implementations.Employee
 
         public async Task<Core.Entities.Employee> Get(int id)
         {
-            Core.Entities.Employee dbEmployee = await _unitOfWork.EmployeeRepository.Get(x => x.Id == id,"Position");
+            Core.Entities.Employee dbEmployee = await _unitOfWork.EmployeeRepository.Get(x => x.Id == id && x.IsDeleted==false,"Position");
             if (dbEmployee is null) throw new Exception("not");
             return dbEmployee;
         }
 
         public async Task<List<Core.Entities.Employee>> GetAll()
         {
-            List<Core.Entities.Employee> dbEmployeeList = await _unitOfWork.EmployeeRepository.GetAll(null, "Position");
+            List<Core.Entities.Employee> dbEmployeeList = await _unitOfWork.EmployeeRepository.GetAll(x=>x.IsDeleted==false, "Position");
             List<EmployeeVM> employeeList = new List<EmployeeVM>();
             foreach (var dbEmployee in dbEmployeeList)
             {
