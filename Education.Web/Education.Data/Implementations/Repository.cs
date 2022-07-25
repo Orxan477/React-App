@@ -36,7 +36,7 @@ namespace Education.Data.Implementations
 
         public void Delete(T entity)
         {
-            _context.Set<T>().Remove(entity);
+            _context.Set<T>().Update(entity);
         }
         public void Update(T entity)
         {
