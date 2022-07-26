@@ -1,7 +1,4 @@
-﻿using Education.Business.Mediator.Commands.Employee;
-using Education.Business.ViewModels.Employee;
-
-namespace Education.Business.Interfaces.Employee
+﻿namespace Education.Business.Interfaces.Employee
 {
     public interface IEmployeeService
     {
