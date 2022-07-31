@@ -8,8 +8,8 @@ namespace Education.Business.Validations.Employee
         public CreateEmployeeVMValidation()
         {
             RuleFor(x=>x.Fullname).NotNull().NotEmpty().MaximumLength(50);
-            RuleFor(x => x.Age).GreaterThanOrEqualTo(0);
-            RuleFor(x => x.PositionId).GreaterThanOrEqualTo(0);
+            RuleFor(x => x.Age).NotNull().NotEmpty();
+            RuleFor(x => x.PositionId).NotNull().NotEmpty();
         }
     }
 }
