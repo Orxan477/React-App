@@ -20,6 +20,7 @@ namespace Education.Business.Implementations.Employee
         public async Task<int> CreateAsync(Core.Entities.Employee createEmployee)
         {
             if (createEmployee is null) throw new Exception("not");
+            createEmployee.CreatedDate = DateTime.Now;
             await _unitOfWork.EmployeeRepository.CreateAsync(createEmployee);
             await _unitOfWork.SaveChangeAsync();
             return createEmployee.Id;
