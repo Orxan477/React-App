@@ -50,5 +50,11 @@ namespace Education.Business.Implementations.Employee
             }
             return dbEmployeeList;
         }
+
+        public async Task Update(Core.Entities.Employee employee)
+        {
+           _unitOfWork.EmployeeRepository.Update(employee);
+            await _unitOfWork.SaveChangeAsync();
+        }
     }
 }

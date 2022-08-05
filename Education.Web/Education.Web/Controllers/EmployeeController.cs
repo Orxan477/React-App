@@ -3,6 +3,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Education.Business.Mediator.Commands.Employee;
 using Education.Business.Mediator.Commands.Employee.Delete;
+using Education.Business.Mediator.Commands.Employee.Update;
 
 namespace Education.Web.Controllers
 {
@@ -34,9 +35,16 @@ namespace Education.Web.Controllers
             return Ok(await _mediator.Send(command));
         }
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update()
+        public async Task<IActionResult> Update(int id, UpdateEmployeeCommand command)
         {
-            return Ok();
+            var query = new UpdateEmployeeCommand()
+            {
+                Id = id,
+                Fullname=command.Fullname,
+                PositionId=command.PositionId,
+                Age=command.Age
+            };
+            return Ok(await _mediator.Send(query));
         }
         [HttpPatch("{id}")]
         public async Task<IActionResult> Delete(int id)
