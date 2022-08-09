@@ -21,6 +21,7 @@ namespace Education.Web.Controllers
             _unitOfWork = unitOfWork;
         }
         [HttpPost()]
+        [Route("register")]
         public async Task Register(RegisterVM register)
         {
             AppUser newUser = new AppUser
