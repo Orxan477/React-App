@@ -1,4 +1,5 @@
-﻿using Education.Business.ViewModels.Account;
+﻿using Education.Business.Utilities;
+using Education.Business.ViewModels.Account;
 using Education.Core.Entities;
 using Education.Core.Interfaces;
 using Microsoft.AspNetCore.Http;
@@ -13,12 +14,15 @@ namespace Education.Web.Controllers
     {
         private UserManager<AppUser> _userManager;
         private IUnitOfWork _unitOfWork;
+        private RoleManager<IdentityRole> _roleManager;
 
         public AccountController(UserManager<AppUser> userManager,
-                                 IUnitOfWork unitOfWork)
+                                 IUnitOfWork unitOfWork,
+                                 RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
             _unitOfWork = unitOfWork;
+            _roleManager = roleManager;
         }
         [HttpPost()]
         [Route("register")]
@@ -43,6 +47,19 @@ namespace Education.Web.Controllers
                 }
             }
             await _unitOfWork.SaveChangeAsync();
+        }
+        [HttpPost()]
+        [Route("createRole")]
+        public async Task<string> CreateRole()
+        {
+            foreach (var role in Enum.GetValues(typeof(Roles)))
+            {
+                if (!await _roleManager.RoleExistsAsync(role.ToString()))
+                {
+                    await _roleManager.CreateAsync(new IdentityRole { Name = role.ToString() });
+                }
+            }
+            return "Hazirdir";
         }
     }
 }
