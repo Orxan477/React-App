@@ -61,5 +61,11 @@ namespace Education.Web.Controllers
             }
             return "Hazirdir";
         }
+        [HttpPost()]
+        [Route("login")]
+        public async Task<string> Login(LoginVM login)
+        {
+            return "Hele Hazirlanir";
+        }
     }
 }
