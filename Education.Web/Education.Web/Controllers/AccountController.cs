@@ -1,6 +1,8 @@
 ﻿using Education.Business.ViewModels.Account;
 using Education.Core.Entities;
+using Education.Core.Interfaces;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Education.Web.Controllers
@@ -9,16 +11,37 @@ namespace Education.Web.Controllers
     [ApiController]
     public class AccountController : ControllerBase
     {
-        [HttpPost]
-        public async Task<IActionResult> Register(RegisterVM register)
+        private UserManager<AppUser> _userManager;
+        private IUnitOfWork _unitOfWork;
+
+        public AccountController(UserManager<AppUser> userManager,
+                                 IUnitOfWork unitOfWork)
+        {
+            _userManager = userManager;
+            _unitOfWork = unitOfWork;
+        }
+        [HttpPost()]
+        public async Task Register(RegisterVM register)
         {
             AppUser newUser = new AppUser
             {
                 FullName = register.FullName,
-                UserName = register.U,
-                Email = "orxan_qanbarov@mail.ru"
+                UserName = register.UserName,
+                Email = register.Email
             };
-
+           IdentityResult result = await _userManager.CreateAsync(newUser,register.Password);
+            if (result.Succeeded)
+            {
+                await _userManager.AddToRoleAsync(newUser, "Admin");
+            }
+            else
+            {
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+            }
+            await _unitOfWork.SaveChangeAsync();
         }
     }
 }
