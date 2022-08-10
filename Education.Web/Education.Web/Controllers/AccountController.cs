@@ -65,7 +65,7 @@ namespace Education.Web.Controllers
         [Route("login")]
         public async Task<string> Login(LoginVM login)
         {
-            // Validation yarat 
+            
             return "Hele Hazirlanir";
         }
     }

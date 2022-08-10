@@ -7,7 +7,7 @@ namespace Education.Business.Validations.Account
     {
         public LoginVMValidation()
         {
-            RuleFor(x => x.Email).NotEmpty().NotNull().MaximumLength(255);
+            RuleFor(x => x.Email).NotEmpty().NotNull().EmailAddress().MaximumLength(255);
             RuleFor(x => x.Password).NotEmpty().NotNull().MaximumLength(255);
         }
     }
