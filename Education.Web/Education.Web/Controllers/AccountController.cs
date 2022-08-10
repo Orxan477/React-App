@@ -15,14 +15,17 @@ namespace Education.Web.Controllers
         private UserManager<AppUser> _userManager;
         private IUnitOfWork _unitOfWork;
         private RoleManager<IdentityRole> _roleManager;
+        private SignInManager<AppUser> _signInManager;
 
         public AccountController(UserManager<AppUser> userManager,
                                  IUnitOfWork unitOfWork,
-                                 RoleManager<IdentityRole> roleManager)
+                                 RoleManager<IdentityRole> roleManager,
+                                 SignInManager<AppUser> signInManager)
         {
             _userManager = userManager;
             _unitOfWork = unitOfWork;
             _roleManager = roleManager;
+            _signInManager = signInManager;
         }
         [HttpPost()]
         [Route("register")]
@@ -63,10 +66,15 @@ namespace Education.Web.Controllers
         }
         [HttpPost()]
         [Route("login")]
-        public async Task<string> Login(LoginVM login)
+        public async Task<ActionResult> Login(LoginVM login)
         {
-            
-            return "Hele Hazirlanir";
+            AppUser user =await  _userManager.FindByEmailAsync(login.Email);
+            if (user is null) return NotFound();
+            if (user.IsActive==false) return BadRequest("Profile no active");
+            var result = await _signInManager.PasswordSignInAsync(user, login.Password, false, false);
+            if (result.IsLockedOut) return BadRequest("Profile is locked");
+            if (!result.Succeeded) return BadRequest("User or Password incorrect");
+            return Ok("Giris alindi");
         }
     }
 }
