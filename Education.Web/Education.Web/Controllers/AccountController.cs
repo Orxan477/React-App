@@ -37,19 +37,14 @@ namespace Education.Web.Controllers
                 UserName = register.UserName,
                 Email = register.Email
             };
-           IdentityResult result = await _userManager.CreateAsync(newUser,register.Password);
-            if (result.Succeeded)
-            {
-                await _userManager.AddToRoleAsync(newUser, "Admin");
-            }
-            else
-            {
-                foreach (var error in result.Errors)
-                {
-                    ModelState.AddModelError("", error.Description);
-                }
-            }
-            await _unitOfWork.SaveChangeAsync();
+
+            //else
+            //{
+            //    foreach (var error in result.Errors)
+            //    {
+            //        ModelState.AddModelError("", error.Description);
+            //    }
+            //}
         }
         [HttpPost()]
         [Route("createRole")]
