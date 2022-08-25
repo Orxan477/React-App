@@ -1,6 +1,6 @@
 ﻿namespace Education.Core.Interfaces
 {
-    public interface IAccount<TEntity>
+    public interface IAccountRepository<TEntity>
     {
         Task Register(TEntity entity);
         Task<bool> Login(TEntity entity);
