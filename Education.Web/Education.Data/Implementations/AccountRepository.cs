@@ -12,13 +12,10 @@ namespace Education.Data.Implementations
     internal class AccountRepository : IAccountRepository<AppUser>
     {
         private UserManager<AppUser> _userManager;
-        private IUnitOfWork _unitOfWork;
 
-        public AccountRepository(UserManager<AppUser> userManager,
-                                 IUnitOfWork unitOfWork)
+        public AccountRepository(UserManager<AppUser> userManager)
         {
             _userManager = userManager;
-            _unitOfWork = unitOfWork;
         }
         public async Task<bool> Register(AppUser entity, string password)
         {
@@ -26,7 +23,6 @@ namespace Education.Data.Implementations
             if (result.Succeeded)
             {
                 await _userManager.AddToRoleAsync(entity, "Admin");
-                await _unitOfWork.SaveChangeAsync();
                 return true;
             }
             return false;
