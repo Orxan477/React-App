@@ -17,4 +17,8 @@
     <ProjectReference Include="..\Education.Data\Education.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Interfaces\Account\" />
+  </ItemGroup>
+
 </Project>

@@ -31,12 +31,7 @@ namespace Education.Web.Controllers
         [Route("register")]
         public async Task Register(RegisterVM register)
         {
-            AppUser newUser = new AppUser
-            {
-                FullName = register.FullName,
-                UserName = register.UserName,
-                Email = register.Email
-            };
+            //Burdakilari account service gonder ve controllerin icini duzelt try catch ile tut errorlari duzelt
 
             //else
             //{
