@@ -12,6 +12,8 @@ using FluentValidation.AspNetCore;
 using Education.Business.Validations.Employee;
 using Education.Core.Entities;
 using Microsoft.AspNetCore.Identity;
+using Education.Business.Implementations.Account;
+using Education.Business.Interfaces.Account;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -50,6 +52,7 @@ builder.Services.Configure<IdentityOptions>(opt =>
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
+builder.Services.AddScoped<IAccountService, AccountService>();
 
 builder.Services.AddMapperService();
 builder.Services.AddFluentValidation(x => x.RegisterValidatorsFromAssemblyContaining<CreateEmployeeVMValidation>());

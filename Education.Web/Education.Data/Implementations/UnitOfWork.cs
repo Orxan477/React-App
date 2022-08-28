@@ -14,9 +14,10 @@ namespace Education.Data.Implementations
         private EmployeeRepository _employeeRepository;
         private AccountRepository _accountRepository;
 
-        public UnitOfWork(AppDbContext context)
+        public UnitOfWork(AppDbContext context,UserManager<AppUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
         public IEmployeeRepository EmployeeRepository => _employeeRepository ?? new EmployeeRepository(_context);
 

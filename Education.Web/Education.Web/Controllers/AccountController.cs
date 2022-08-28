@@ -1,4 +1,5 @@
-﻿using Education.Business.Utilities;
+﻿using Education.Business.Interfaces.Account;
+using Education.Business.Utilities;
 using Education.Business.ViewModels.Account;
 using Education.Core.Entities;
 using Education.Core.Interfaces;
@@ -13,25 +14,26 @@ namespace Education.Web.Controllers
     public class AccountController : ControllerBase
     {
         private UserManager<AppUser> _userManager;
-        private IUnitOfWork _unitOfWork;
         private RoleManager<IdentityRole> _roleManager;
         private SignInManager<AppUser> _signInManager;
+        private IAccountService _accountService;
 
         public AccountController(UserManager<AppUser> userManager,
-                                 IUnitOfWork unitOfWork,
                                  RoleManager<IdentityRole> roleManager,
-                                 SignInManager<AppUser> signInManager)
+                                 SignInManager<AppUser> signInManager,
+                                 IAccountService accountService)
         {
             _userManager = userManager;
-            _unitOfWork = unitOfWork;
             _roleManager = roleManager;
             _signInManager = signInManager;
+            _accountService = accountService;
         }
         [HttpPost()]
         [Route("register")]
         public async Task Register(RegisterVM register)
         {
-            //Burdakilari account service gonder ve controllerin icini duzelt try catch ile tut errorlari duzelt
+            await _accountService.Register(register);
+            //BadRequest ve not foundlarlar erorlari tut ve goster
 
             //else
             //{

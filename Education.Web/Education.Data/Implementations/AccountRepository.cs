@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Education.Data.Implementations
 {
-    internal class AccountRepository : IAccountRepository<AppUser>
+    public class AccountRepository: IAccountRepository<AppUser>
     {
         private UserManager<AppUser> _userManager;
 
@@ -17,20 +17,22 @@ namespace Education.Data.Implementations
         {
             _userManager = userManager;
         }
+
         public async Task<bool> Register(AppUser entity, string password)
         {
-            IdentityResult result = await _userManager.CreateAsync(entity, password);
-            if (result.Succeeded)
+            //IdentityResult result = await _userManager.CreateAsync(entity, password);
+            IdentityResult identityResult = await _userManager.CreateAsync(entity, password);
+            if (identityResult.Succeeded)
             {
                 await _userManager.AddToRoleAsync(entity, "Admin");
                 return true;
             }
             return false;
         }
+
         public Task<bool> Login(AppUser entity)
         {
             throw new NotImplementedException();
         }
-
     }
 }
