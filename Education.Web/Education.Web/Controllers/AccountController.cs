@@ -33,15 +33,6 @@ namespace Education.Web.Controllers
         public async Task Register(RegisterVM register)
         {
             await _accountService.Register(register);
-            //BadRequest ve not foundlarlar erorlari tut ve goster
-
-            //else
-            //{
-            //    foreach (var error in result.Errors)
-            //    {
-            //        ModelState.AddModelError("", error.Description);
-            //    }
-            //}
         }
         [HttpPost()]
         [Route("createRole")]
@@ -60,9 +51,9 @@ namespace Education.Web.Controllers
         [Route("login")]
         public async Task<ActionResult> Login(LoginVM login)
         {
-            AppUser user =await  _userManager.FindByEmailAsync(login.Email);
+            AppUser user = await _userManager.FindByEmailAsync(login.Email);
             if (user is null) return NotFound();
-            if (user.IsActive==false) return BadRequest("Profile no active");
+            if (user.IsActive == false) return BadRequest("Profile no active");
             var result = await _signInManager.PasswordSignInAsync(user, login.Password, false, false);
             if (result.IsLockedOut) return BadRequest("Profile is locked");
             if (!result.Succeeded) return BadRequest("User or Password incorrect");

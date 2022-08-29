@@ -1,6 +1,8 @@
 ﻿using Education.Core.Entities;
 using Education.Core.Interfaces;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,16 +20,16 @@ namespace Education.Data.Implementations
             _userManager = userManager;
         }
 
-        public async Task<bool> Register(AppUser entity, string password)
+        public async Task Register(AppUser entity, string password)
         {
-            //IdentityResult result = await _userManager.CreateAsync(entity, password);
+            AppUser user =await  _userManager.FindByEmailAsync(entity.Email);
+            if (user != null) throw new Exception("mail movcddur");
             IdentityResult identityResult = await _userManager.CreateAsync(entity, password);
             if (identityResult.Succeeded)
             {
                 await _userManager.AddToRoleAsync(entity, "Admin");
-                return true;
             }
-            return false;
+            throw new Exception("Problem var");
         }
 
         public Task<bool> Login(AppUser entity)

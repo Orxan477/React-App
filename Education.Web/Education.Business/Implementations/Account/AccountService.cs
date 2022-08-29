@@ -13,7 +13,7 @@ namespace Education.Business.Implementations.Account
         {
             _unitOfWork = unitOfWork;
         }
-        public async Task<bool> Register(RegisterVM register)
+        public async Task Register(RegisterVM register)
         {
 
             AppUser user = new AppUser
@@ -22,15 +22,7 @@ namespace Education.Business.Implementations.Account
                 Email = register.Email,
                 FullName = register.FullName,
             };
-            if (await _unitOfWork.AccountRepository.Register(user, register.Password))
-            //if (await _accountRe.Register(user, register.Password))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            await _unitOfWork.AccountRepository.Register(user, register.Password);
         }
     }
 }
