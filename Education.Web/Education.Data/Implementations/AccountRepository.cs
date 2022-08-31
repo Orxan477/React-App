@@ -8,12 +8,15 @@ namespace Education.Data.Implementations
     {
         private UserManager<AppUser> _userManager;
         private SignInManager<AppUser> _signInManager;
+        private RoleManager<IdentityRole> _roleManager;
 
-        public AccountRepository(UserManager<AppUser> userManager,
+        public AccountRepository(UserManager<AppUser> userManager, 
+                                 RoleManager<IdentityRole> roleManager,
                                  SignInManager<AppUser> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _roleManager = roleManager;
         }
 
         public async Task Register(AppUser entity, string password)
@@ -36,6 +39,14 @@ namespace Education.Data.Implementations
             var result = await _signInManager.PasswordSignInAsync(user, password, false, false);
             if (result.IsLockedOut) throw new Exception("Profile is locked");
             if (!result.Succeeded) throw new Exception("User or Password incorrect");
+        }
+
+        public async Task CreateRole(string role)
+        {
+                if (!await _roleManager.RoleExistsAsync(role))
+                {
+                    await _roleManager.CreateAsync(new IdentityRole { Name = role.ToString() });
+                }
         }
     }
 }
