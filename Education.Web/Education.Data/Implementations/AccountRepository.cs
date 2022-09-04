@@ -36,9 +36,11 @@ namespace Education.Data.Implementations
             AppUser user = await _userManager.FindByEmailAsync(email);
             if (user is null) throw new Exception("Not Found");
             if (user.IsActive == false) throw new Exception("Profile no active");
+            var checkPassword=await _userManager.CheckPasswordAsync(user, password);
+            if (!checkPassword) throw new Exception("Password incorrect");
             var result = await _signInManager.PasswordSignInAsync(user, password, false, false);
             if (result.IsLockedOut) throw new Exception("Profile is locked");
-            if (!result.Succeeded) throw new Exception("User or Password incorrect");
+            if (!result.Succeeded) throw new Exception("User incorrect");
         }
 
         public async Task CreateRole(string role)
