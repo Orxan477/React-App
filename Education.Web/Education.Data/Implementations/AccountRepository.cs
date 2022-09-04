@@ -49,8 +49,8 @@ namespace Education.Data.Implementations
             var result = await _signInManager.PasswordSignInAsync(user, password, false, false);
             if (result.IsLockedOut) throw new Exception("Profile is locked");
             if (!result.Succeeded) throw new Exception("User incorrect");
-            string token = JwtToken(user);
-            if (result.Succeeded) throw new Exception(token);
+            //string token = JwtToken(user);
+            //if (result.Succeeded) throw new Exception(token);
         }
 
         public async Task CreateRole(string role)
@@ -62,6 +62,14 @@ namespace Education.Data.Implementations
         }
         private string JwtToken(AppUser user)
         {
+            List<Claim> claims = GetClaims(user);
+            SigningCredentials credentials = GetCredentials();
+            JwtSecurityToken securityToken= SecurityToken(claims, credentials);
+            var token=new JwtSecurityTokenHandler().WriteToken(securityToken);
+            return token;
+        }
+        private List<Claim> GetClaims(AppUser user)
+        {
             List<Claim> claims = new List<Claim>
             {
                 new Claim(ClaimTypes.NameIdentifier,user.Id),
@@ -70,9 +78,17 @@ namespace Education.Data.Implementations
             };
             IList<string> roles = _userManager.GetRolesAsync(user).Result;
             claims.AddRange(roles.Select(x => new Claim(ClaimTypes.Role, x)));
+            return claims;
+        }
+        private SigningCredentials GetCredentials()
+        {
             SymmetricSecurityKey symmetric = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(
                                                         _configuration.GetSection("Jwt:securityKey").Value));
             SigningCredentials credentials = new SigningCredentials(symmetric, SecurityAlgorithms.HmacSha256);
+            return credentials;
+        }
+        private JwtSecurityToken SecurityToken(List<Claim> claims, SigningCredentials credentials)
+        {
             JwtSecurityToken securityToken = new JwtSecurityToken(
                 issuer: _configuration.GetSection("Jwt:issuer").Value,
                 audience: _configuration.GetSection("Jwt:audience").Value,
@@ -80,8 +96,7 @@ namespace Education.Data.Implementations
                 expires: DateTime.UtcNow.AddDays(1),
                 signingCredentials: credentials
                 );
-            var token=new JwtSecurityTokenHandler().WriteToken(securityToken);
-            return token;
+            return securityToken;
         }
     }
 }
