@@ -14,6 +14,9 @@ using Education.Core.Entities;
 using Microsoft.AspNetCore.Identity;
 using Education.Business.Implementations.Account;
 using Education.Business.Interfaces.Account;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using System.Text;
+using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -56,6 +59,21 @@ builder.Services.AddScoped<IAccountService, AccountService>();
 
 builder.Services.AddMapperService();
 builder.Services.AddFluentValidation(x => x.RegisterValidatorsFromAssemblyContaining<CreateEmployeeVMValidation>());
+builder.Services.AddAuthentication(opt =>
+{
+    opt.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+    opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(opt =>
+{
+    opt.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidAudience = builder.Configuration["Jwt:audience"],
+        ValidIssuer = builder.Configuration["Jwt:issuer"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(
+                                                        builder.Configuration["Jwt:securityKey"]))
+    };
+});
 
 var app = builder.Build();
 
@@ -68,6 +86,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

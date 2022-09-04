@@ -347,3 +347,4 @@ E:\Documents\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Web
 E:\Documents\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Web\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
 E:\Documents\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Web\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
 E:\Documents\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Web\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+E:\Documents\Code Academy\Front-End\Site\E-COM React\Education.Web\Education.Web\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
