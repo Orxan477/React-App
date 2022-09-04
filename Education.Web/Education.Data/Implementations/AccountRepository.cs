@@ -4,13 +4,13 @@ using Microsoft.AspNetCore.Identity;
 
 namespace Education.Data.Implementations
 {
-    public class AccountRepository: IAccountRepository<AppUser>
+    public class AccountRepository : IAccountRepository<AppUser>
     {
         private UserManager<AppUser> _userManager;
         private SignInManager<AppUser> _signInManager;
         private RoleManager<IdentityRole> _roleManager;
 
-        public AccountRepository(UserManager<AppUser> userManager, 
+        public AccountRepository(UserManager<AppUser> userManager,
                                  RoleManager<IdentityRole> roleManager,
                                  SignInManager<AppUser> signInManager)
         {
@@ -21,7 +21,7 @@ namespace Education.Data.Implementations
 
         public async Task Register(AppUser entity, string password)
         {
-            AppUser user =await  _userManager.FindByEmailAsync(entity.Email);
+            AppUser user = await _userManager.FindByEmailAsync(entity.Email);
             if (user != null) throw new Exception("mail movcddur");
             IdentityResult identityResult = await _userManager.CreateAsync(entity, password);
             if (identityResult.Succeeded)
@@ -43,10 +43,10 @@ namespace Education.Data.Implementations
 
         public async Task CreateRole(string role)
         {
-                if (!await _roleManager.RoleExistsAsync(role))
-                {
-                    await _roleManager.CreateAsync(new IdentityRole { Name = role.ToString() });
-                }
+            if (!await _roleManager.RoleExistsAsync(role))
+            {
+                await _roleManager.CreateAsync(new IdentityRole { Name = role.ToString() });
+            }
         }
     }
 }

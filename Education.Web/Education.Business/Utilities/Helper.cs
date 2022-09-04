@@ -6,6 +6,7 @@
     public enum Roles
     {
         Admin,
-        Member
+        Member,
+        Seller
     }
 }

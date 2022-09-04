@@ -1,4 +1,5 @@
 ﻿using Education.Business.Interfaces.Account;
+using Education.Business.Utilities;
 using Education.Business.ViewModels.Account;
 using Education.Core.Entities;
 using Education.Core.Interfaces;
@@ -13,6 +14,8 @@ namespace Education.Business.Implementations.Account
         {
             _unitOfWork = unitOfWork;
         }
+
+
         public async Task Register(RegisterVM register)
         {
 
@@ -23,6 +26,17 @@ namespace Education.Business.Implementations.Account
                 FullName = register.FullName,
             };
             await _unitOfWork.AccountRepository.Register(user, register.Password);
+        }
+        public async Task Login(LoginVM login)
+        {
+            await _unitOfWork.AccountRepository.Login(login.Email, login.Password);
+        }
+        public async Task CreateRole()
+        {
+            foreach (var role in Enum.GetValues(typeof(Roles)))
+            {
+                await _unitOfWork.AccountRepository.CreateRole(role.ToString());
+            }
         }
     }
 }

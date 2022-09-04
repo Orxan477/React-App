@@ -3,6 +3,7 @@
     public interface IAccountRepository<TEntity>
     {
         Task Register(TEntity entity,string password);
-        Task<bool> Login(TEntity entity);
+        Task Login(string email, string password);
+        Task CreateRole(string role);
     }
 }
