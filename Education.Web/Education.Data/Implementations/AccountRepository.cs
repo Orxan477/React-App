@@ -49,8 +49,8 @@ namespace Education.Data.Implementations
             var result = await _signInManager.PasswordSignInAsync(user, password, false, false);
             if (result.IsLockedOut) throw new Exception("Profile is locked");
             if (!result.Succeeded) throw new Exception("User incorrect");
-            //string token = JwtToken(user);
-            //if (result.Succeeded) throw new Exception(token);
+            string token = JwtToken(user);
+            if (result.Succeeded) throw new Exception(token);
         }
 
         public async Task CreateRole(string role)
@@ -64,8 +64,8 @@ namespace Education.Data.Implementations
         {
             List<Claim> claims = GetClaims(user);
             SigningCredentials credentials = GetCredentials();
-            JwtSecurityToken securityToken= SecurityToken(claims, credentials);
-            var token=new JwtSecurityTokenHandler().WriteToken(securityToken);
+            JwtSecurityToken securityToken = SecurityToken(claims, credentials);
+            var token = new JwtSecurityTokenHandler().WriteToken(securityToken);
             return token;
         }
         private List<Claim> GetClaims(AppUser user)

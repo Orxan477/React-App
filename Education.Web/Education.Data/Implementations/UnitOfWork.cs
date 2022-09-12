@@ -22,7 +22,8 @@ namespace Education.Data.Implementations
                           UserManager<AppUser> userManager, 
                           SignInManager<AppUser> signInManager, 
                           RoleManager<IdentityRole> identityRole,
-                          IConfiguration configure)
+                          IConfiguration configure
+                          )
         {
             _context = context;
             _userManager = userManager;

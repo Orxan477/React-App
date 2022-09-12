@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Education.Business.Mediator.Commands.Employee;
 using Education.Business.Mediator.Commands.Employee.Delete;
 using Education.Business.Mediator.Commands.Employee.Update;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Education.Web.Controllers
 {
@@ -18,6 +19,7 @@ namespace Education.Web.Controllers
             _mediator = mediator;
         }
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<IActionResult> Get(int id)
         {
             var query = new GetEmployeeByIdQuery() { Id = id };
