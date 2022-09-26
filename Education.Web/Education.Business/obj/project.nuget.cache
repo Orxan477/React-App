@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QwCrukTu6FRQXn694CD0eFP2OCfHFMvFBHh0/SF7gCowDly3YRk/wWwCY7EHqBH88FtdCeiu5vp5aJzyGDGXKw==",
+  "dgSpecHash": "lZOvjdLU1ddulAADDaFJ0cI2n0NUslVSrgGcNOspV74pGTq3Svfg8YxdIkBz6RB6KLRKz6QkeRdj4D2rsoIe8A==",
   "success": true,
-  "projectFilePath": "E:\\Documents\\Code Academy\\Front-End\\Site\\E-COM React\\Education.Web\\Education.Business\\Education.Business.csproj",
+  "projectFilePath": "E:\\Documents\\Code Academy\\Projects\\E-COM React\\Education.Web\\Education.Business\\Education.Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Orxan477\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\Orxan477\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dWn2DL6Y5qDh8ODZTZiVZ7kMEQWloQrc8eclwKflR4z2vwpYqGc08pc0K5mvAS6X3d/5VfBT0HqzyVCR+YAyug==",
+  "dgSpecHash": "i7bkCcelGPTls+r0iaMag1z7J/ciqimi8TNGEv+zQMRb7s03I9GuKGm87YTbeoDO9Yz0c7GA7uBcm7VmM68NLQ==",
   "success": true,
-  "projectFilePath": "E:\\Documents\\Code Academy\\Front-End\\Site\\E-COM React\\Education.Web\\Education.Core\\Education.Core.csproj",
+  "projectFilePath": "E:\\Documents\\Code Academy\\Projects\\E-COM React\\Education.Web\\Education.Core\\Education.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Orxan477\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.0\\microsoft.aspnetcore.cryptography.internal.6.0.0.nupkg.sha512",
     "C:\\Users\\Orxan477\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.0\\microsoft.aspnetcore.cryptography.keyderivation.6.0.0.nupkg.sha512",

@@ -10845,11 +10845,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Documents\\Code Academy\\Front-End\\Site\\E-COM React\\Education.Web\\Education.Web\\Education.Web.csproj",
+      "projectUniqueName": "E:\\Documents\\Code Academy\\Projects\\E-COM React\\Education.Web\\Education.Web\\Education.Web.csproj",
       "projectName": "Education.Web",
-      "projectPath": "E:\\Documents\\Code Academy\\Front-End\\Site\\E-COM React\\Education.Web\\Education.Web\\Education.Web.csproj",
+      "projectPath": "E:\\Documents\\Code Academy\\Projects\\E-COM React\\Education.Web\\Education.Web\\Education.Web.csproj",
       "packagesPath": "C:\\Users\\Orxan477\\.nuget\\packages\\",
-      "outputPath": "E:\\Documents\\Code Academy\\Front-End\\Site\\E-COM React\\Education.Web\\Education.Web\\obj\\",
+      "outputPath": "E:\\Documents\\Code Academy\\Projects\\E-COM React\\Education.Web\\Education.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -10870,8 +10870,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\Documents\\Code Academy\\Front-End\\Site\\E-COM React\\Education.Web\\Education.Business\\Education.Business.csproj": {
-              "projectPath": "E:\\Documents\\Code Academy\\Front-End\\Site\\E-COM React\\Education.Web\\Education.Business\\Education.Business.csproj"
+            "E:\\Documents\\Code Academy\\Projects\\E-COM React\\Education.Web\\Education.Business\\Education.Business.csproj": {
+              "projectPath": "E:\\Documents\\Code Academy\\Projects\\E-COM React\\Education.Web\\Education.Business\\Education.Business.csproj"
             }
           }
         }
