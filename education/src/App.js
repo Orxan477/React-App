@@ -5,6 +5,13 @@ import Intro from "./Components/Intro/Intro";
 import Employee from "./Components/Employee/Employee";
 
 function App() {
+  async function getData(){
+    let fetchData= await fetch('https://localhost:44392/api/employee');
+    let data =await fetchData.json();
+    console.log(data)
+  }
+  getData();
+  
   return (
     <div>
       <Container>
